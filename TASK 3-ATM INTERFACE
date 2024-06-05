@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class ATM 
+{
+    public static void main(String[] args) {
+        int balance=100000;
+        int withdraw,deposit;
+        Scanner sc=new Scanner(System.in);
+
+
+        while (true)
+        {
+        System.out.println("   WELCOME TO SBI ATM");
+        System.out.println("_____________________________");
+         System.out.println("AUTOMATED TELLOR MACHINE"); 
+         System.out.println("CHOOSE: 1 FOR WITHDRAW");
+         System.out.println("CHOOSE :2 FOR DEPOSIT");   
+         System.out.println("CHOOSE :3 FOR CHECKBLANCE");   
+         System.out.println("CHOOSE :4 FOR EXIT");  
+         System.out.println("CHOOSE THE OPERATION YOU WANT TO PERFORM  :"+"");  
+
+         int choice=sc.nextInt();
+        
+         switch(choice)
+         {
+            case 1:
+            System.out.println("Enter Your Money To Be Withdrawn:");
+            withdraw=sc.nextInt();
+            if(balance >= withdraw)
+            {
+                balance=balance-withdraw;
+                System.out.println("Please Collect Your Money");
+                System.out.println("VIST AGAIN");
+            }
+            else
+            {
+                System.out.println("Insufficient Balance");
+            }
+            System.out.println("");
+            break;
+
+            
+            case 2:
+            System.out.println("Enter Your Deposit Money:");
+
+            deposit=sc.nextInt();
+             balance=balance+deposit;
+
+             System.out.println("Sussesfully Money Depositted");
+             System.out.println("");
+             break;
+
+            case 3:
+            System.out.println("BALANCE:"+balance);
+            System.out.println("");
+            break;
+
+            case 4:
+            System.exit(0);
+           }
+        
+    }
+  }
+}
+
+    
+
